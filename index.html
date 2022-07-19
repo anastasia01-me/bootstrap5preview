@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link href="main.css" rel="stylesheet">
+
+        <title>B5Preview</title>
+    </head>
+    <body data-bs-spy="scroll" data-bs-target="#scrollspyContentMenu" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+        
+        <div id="top"></div>
+        <!-- Navbar -->
+        <nav id="navbar" class="navbar  navbar-expand   ">
+
+            <div class="container-fluid">
+
+                <!-- Brand/Logo-->
+                <a id="navbar-brand" class="navbar-brand" href="#">Brand</a>
+
+                <!-- Button Toggle -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Links(Hidden when minimised) -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul id="navbar-nav" class="navbar-nav  me-auto mb-2 mb-lg-0" style="--bs-scroll-height: 100px;">
+                      <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                      </li>
+                      <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                      </li>
+                      <!-- Dropdown -->
+                      <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Dropdown
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                        </li>
+                    </ul>
+                    <span class="navbar-text">
+                        Navbar text with an inline element
+                    </span>
+                    <!-- Search Bar -->
+                    <form class="d-flex">
+                      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                      <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+  
+        </nav>
+        
+        <div style="padding: 10px;">
+            <h6>navbar-expand</h6>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="navbar-expand" id="navbar-expand" value="navbar-expand" onclick="toggleClass('navbar', 2, 'navbar-expand')" checked>
+                <label class="form-check-label" for="navbar-expand-sm">navbar-expand</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="navbar-expand" id="navbar-expand-sm" value="navbar-expand-sm" onclick="toggleClass('navbar', 2, 'navbar-expand-sm')">
+                <label class="form-check-label" for="navbar-expand-sm">navbar-expand-sm</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="navbar-expand" id="navbar-expand-md" value="navbar-expand-md" onclick="toggleClass('navbar', 2, 'navbar-expand-md')">
+                <label class="form-check-label" for="navbar-expand-md">navbar-expand-md</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="navbar-expand" id="navbar-expand-lg"  value="navbar-expand-lg" onclick="toggleClass('navbar', 2, 'navbar-expand-lg')">
+                <label class="form-check-label" for="navbar-expand-lg">navbar-expand-lg</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="navbar-expand" id="navbar-expand-xl"  value="navbar-expand-xl" onclick="toggleClass('navbar', 2, 'navbar-expand-xl')">
+                <label class="form-check-label" for="navbar-expand-xl">navbar-expand-xl</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="navbar-expand" id="navbar-expand-xl"  value="navbar-expand-xxl" onclick="toggleClass('navbar', 2, 'navbar-expand-xxl')">
+                <label class="form-check-label" for="navbar-expand-xxl">navbar-expand-xxl</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="navbar-expand" id="navbar-expand-none" value="navbar-expand-none" onclick="toggleClass('navbar', 2, '')">
+                <label class="form-check-label" for="navbar-expand-none">no navbar-expand</label>
+            </div>
+        </div>
+
+        <div style="padding: 10px;">
+            <h6>navbar-brand</h6>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="navbar-brand" id="navbar-brand-text" value="navbar-brand-text" onclick="modifyInnerHTML('navbar-brand', 'navbar-brand-text')" checked>
+                <label class="form-check-label" for="navbar-brand-text">Text</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="navbar-brand" id="navbar-brand-image" value="navbar-brand-image" onclick="modifyInnerHTML('navbar-brand', 'navbar-brand-image')">
+                <label class="form-check-label" for="navbar-brand-image">Image</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="navbar-brand" id="navbar-brand-imageText"  value="navbar-brand-imageText" onclick="modifyInnerHTML('navbar-brand', 'navbar-brand-imageText')">
+                <label class="form-check-label" for="navbar-brand-imageText">Image Text</label>
+            </div>
+        </div>
+
+        <div style="padding: 10px;">
+            <h6>navbar background</h6>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="navbar-background" id="navbar-nobg" value="navbar-nobg" onclick="toggleClass('navbar', 3, '');toggleClass('navbar', 4, '');" checked>
+                <label class="form-check-label" for="navbar-nobg">No styling</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="navbar-background" id="navbar-light" value="navbar-light" onclick="toggleClass('navbar', 3, 'navbar-light');toggleClass('navbar', 4, 'bg-light');">
+                <label class="form-check-label" for="navbar-light">navbar-light bg-light</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="navbar-background" id="navbar-dark"  value="navbar-dark" onclick="toggleClass('navbar', 3, 'navbar-dark');toggleClass('navbar', 4, 'bg-dark');">
+                <label class="form-check-label" for="navbar-dark">navbar-dark bg-dark</label>
+            </div>
+        </div>
+
+        <div style="padding: 10px;">
+            <h6>navbar position</h6>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="navbar-position" id="navbar-nopo" value="navbar-nopo" onclick="toggleClass('navbar', 1, '')" checked>
+                <label class="form-check-label" for="navbar-nobg">No position styling</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="navbar-position" id="navbar-fixed-top" value="navbar-fixed-top" onclick="toggleClass('navbar', 1, 'fixed-top')">
+                <label class="form-check-label" for="navbar-light">fixed-top</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="navbar-position" id="navbar-fixed-bottom"  value="navbar-fixed-bottom" onclick="toggleClass('navbar', 1, 'fixed-bottom')">
+                <label class="form-check-label" for="navbar-dark">fixed-bottom</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="navbar-position" id="navbar-sticky-top"  value="navbar-sticky-top" onclick="toggleClass('navbar', 1, 'sticky-top')">
+                <label class="form-check-label" for="navbar-dark">sticky-top</label>
+            </div>
+        </div>
+
+        <div style="padding: 10px;">
+            <h6>navbar-nav-scroll</h6>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="navbar-nav-scroll" id="navbar-nav-noscroll" value="navbar-nav-noscroll" onclick="toggleClass('navbar-nav', 1, '')" checked>
+                <label class="form-check-label" for="navbar-nobg">no navbar-nav-scroll</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="navbar-nav-scroll" id="navbar-nav-scroll" value="navbar-nav-scroll" onclick="toggleClass('navbar-nav', 1, 'navbar-nav-scroll')">
+                <label class="form-check-label" for="navbar-nav-scroll">navbar-nav-scroll</label>
+            </div>
+        </div>
+
+        <div style="padding: 10px;">
+            <a href="https://getbootstrap.com/docs/5.0/components/navbar/" target=”_blank”>Documentation for Navbar</a>
+        </div>
+
+        <div id="next"></div>
+
+
+        <!-- Content Menu -->
+        <button id="contentMenuBtn" data-bs-toggle="modal" data-bs-target="#contentMenu">
+            <img src="assets/dotpict_20201219_215008.png" alt="" width="50px" height="auto">
+        </button>
+
+        <div class="modal border" id="contentMenu">
+            <div class="modal-dialog modal-dialog-scrollable m-0">
+                <div class="modal-content border-0">
+                    <div class="modal-body">
+                        <div id="scrollspyContentMenu" class="list-group list-group-flush">
+                            <a class="list-group-item list-group-item-action border-0" href="#top">Navbar</a>
+                            <a class="list-group-item list-group-item-action border-0" href="#next">Item 2</a>
+                            <a class="list-group-item list-group-item-action border-0" href="#list-item-3">Item 3</a>
+                            <a class="list-group-item list-group-item-action border-0" href="#list-item-4">Item 4</a>
+                            <a class="list-group-item list-group-item-action border-0" href="#list-item-3">Item 3</a>
+                            <a class="list-group-item list-group-item-action border-0" href="#list-item-4">Item 4</a>
+                            <a class="list-group-item list-group-item-action border-0" href="#list-item-3">Item 3</a>
+                            <a class="list-group-item list-group-item-action border-0" href="#list-item-4">Item 4</a>
+                            <a class="list-group-item list-group-item-action border-0" href="#list-item-3">Item 3</a>
+                            <a class="list-group-item list-group-item-action border-0" href="#list-item-4">Item 4</a>
+                        </div>
+                    </div>
+              </div>
+            </div>
+        </div>
+        
+
+        <!-- Optional JavaScript; choose one of the two! -->
+
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+        <!-- Option 2: Separate Popper and Bootstrap JS -->
+        <!--
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+        -->
+
+        <!-- Addtional Javascript for toggling -->
+        <script src="main.js"></script>
+    </body>
+</html>

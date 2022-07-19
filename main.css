@@ -1,0 +1,37 @@
+/*Content Menu Button*/
+#contentMenuBtn {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    margin: 10px;
+    z-index: 1;
+    width: 70px;
+    height: 70px;
+    border: 0;
+    border-radius: 15%;
+    background-color: white;
+}
+#contentMenu{
+    top: initial;
+    left: initial;
+    bottom: 0px;
+    right: 0px;
+    margin: 0px 80px 15px 0px;
+    height: auto;
+    max-width: 300px;
+    max-height: 325px;
+}
+#contentMenu:after {
+    content: "";
+    position: fixed;
+    bottom: 35px;
+    right: 75px;
+    width: 12px;
+    height: 12px;
+    border-left: 1px solid transparent;
+    border-right: 1px solid #DDE2E6;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid #DDE2E6;
+    background-color: white;
+    transform: rotate(-45deg);
+  }

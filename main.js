@@ -57,3 +57,46 @@ function modifyInnerHTML(id, type){
 
     document.getElementById(id).innerHTML = html;
 }
+
+function modifyAttributes(id, type){
+    switch (id){
+        //Offcanvas
+        case "offcanvas":
+            //var element = document.querySelector('[id^="offcanvas-id"]');
+            //var button = document.getElementById("offcanvasBtn");
+            var wrap = document.getElementById("offcanvas-wrap");
+            var wrapHTML = wrap.innerHTML;
+            wrap.innerHTML = "";
+            wrap.innerHTML = wrapHTML;
+            var element = document.getElementById("offcanvas");
+
+            switch (type){
+
+                case "nobackdrop-nobodyscroll":
+                    element.setAttribute("data-bs-backdrop",false);
+                    element.setAttribute("data-bs-scroll",false);
+                    //element.id = "offcanvas-id-nbnbs";
+                    //button.setAttribute("data-bs-target","#offcanvas-id-nbnbs");
+                    break;
+                case "backdrop-nobodyscroll":
+                    element.setAttribute("data-bs-backdrop",true);
+                    element.setAttribute("data-bs-scroll",false);
+                    //element.id = "offcanvas-id-bnbs";
+                    //button.setAttribute("data-bs-target","#offcanvas-id-bnbs");
+                    break;
+                case "nobackdrop-bodyscroll":
+                    element.setAttribute("data-bs-backdrop",false);
+                    element.setAttribute("data-bs-scroll",true);
+                    //element.id = "offcanvas-id-nbbs";
+                    //button.setAttribute("data-bs-target","#offcanvas-id-nbbs");
+                    break;
+                case "backdrop-bodyscroll":
+                    element.setAttribute("data-bs-backdrop",true);
+                    element.setAttribute("data-bs-scroll",true);
+                    //element.id = "offcanvas-id-bbs";
+                    //button.setAttribute("data-bs-target","#offcanvas-id-bbs");
+                    break;
+            }
+            break;
+    }
+}

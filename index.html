@@ -11,7 +11,7 @@
     </head>
     <body data-bs-spy="scroll" data-bs-target="#scrollspyContentMenu" data-bs-offset="0" class="scrollspy-example" tabindex="0">
         
-        <div id="top"></div>
+        <div id="anchorNavbar"></div>
         <!-- Navbar -->
         <nav id="navbar" class="navbar  navbar-expand   ">
 
@@ -64,6 +64,7 @@
         </nav>
         
         <div style="padding: 10px;">
+            <h4>Navbar</h4>
             <h6>navbar-expand</h6>
             <div class="form-check form-check-inline">
                 <input class="form-check-input" type="radio" name="navbar-expand" id="navbar-expand" value="navbar-expand" onclick="toggleClass('navbar', 2, 'navbar-expand')" checked>
@@ -162,9 +163,83 @@
         <div style="padding: 10px;">
             <a href="https://getbootstrap.com/docs/5.0/components/navbar/" target=”_blank”>Documentation for Navbar</a>
         </div>
+        <br>
+        <div id="anchorOffcanvas"></div>
+        <!-- Offcanvas -->
 
-        <div id="next"></div>
+        <div style="padding: 10px;">
+            <h4>Offcanvas</h4>
+            <button class="btn btn-primary" id="offcanvasBtn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-controls="offcanvas">
+                Open Offcanvas
+            </button>
+        </div>
+        <div id="offcanvas-wrap">
+            <div class="offcanvas offcanvas-start"  tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
+                <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasLabel">Offcanvas</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <div>
+                        Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+                    </div>
+                    <div class="dropdown mt-3">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
+                    Dropdown button
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <div style="padding: 10px;">
+            <h6>offcanvas placement</h6>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="offcanvas-placement" id="offcanvas-start" value="offcanvas-start" onclick="toggleClass('offcanvas', 1, 'offcanvas-start')" checked>
+                <label class="form-check-label" for="offcanvas-start">offcanvas-start</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="offcanvas-placement" id="offcanvas-end" value="offcanvas-end" onclick="toggleClass('offcanvas', 1, 'offcanvas-end')">
+                <label class="form-check-label" for="offcanvas-end">offcanvas-end</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="offcanvas-placement" id="offcanvas-top"  value="offcanvas-top" onclick="toggleClass('offcanvas', 1, 'offcanvas-top')">
+                <label class="form-check-label" for="offcanvas-top">offcanvas-top</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="offcanvas-placement" id="offcanvas-bottom"  value="offcanvas-bottom" onclick="toggleClass('offcanvas', 1, 'offcanvas-bottom')">
+                <label class="form-check-label" for="offcanvas-bottom">offcanvas-bottom</label>
+            </div>
+        </div>
+
+        <div style="padding: 10px;">
+            <h6>offcanvas backdrop & body scrolling</h6>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="offcanvas-backdrop-scroll" id="offcanvas-nobackdrop-nobodyscroll" value="offcanvas-nobackdrop-nobodyscroll" onclick="modifyAttributes('offcanvas', 'nobackdrop-nobodyscroll')" checked>
+                <label class="form-check-label" for="offcanvas-nobackdrop-nobodyscroll">No backdrop, No body scroll</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="offcanvas-backdrop-scroll" id="offcanvas-backdrop-nobodyscroll" value="offcanvas-backdrop-nobodyscroll" onclick="modifyAttributes('offcanvas', 'backdrop-nobodyscroll')">
+                <label class="form-check-label" for="offcanvas-backdrop-nobodyscroll">Backdrop, No body scroll</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="offcanvas-backdrop-scroll" id="offcanvas-nobackdrop-bodyscroll"  value="offcanvas-nobackdrop-bodyscroll" onclick="modifyAttributes('offcanvas', 'nobackdrop-bodyscroll')">
+                <label class="form-check-label" for="offcanvas-nobackdrop-bodyscroll">No backdrop, Body scroll</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="offcanvas-backdrop-scroll" id="offcanvas-backdrop-bodyscroll"  value="offcanvas-backdrop-bodyscroll" onclick="modifyAttributes('offcanvas', 'backdrop-bodyscroll')">
+                <label class="form-check-label" for="offcanvas-backdrop-bodyscroll">Backdrop, Body scroll</label>
+            </div>
+        </div>
+
+        <div style="padding: 10px;">
+            <a href="https://getbootstrap.com/docs/5.0/components/offcanvas/" target=”_blank”>Documentation for Offcanvas</a>
+        </div>
 
         <!-- Content Menu -->
         <button id="contentMenuBtn" data-bs-toggle="modal" data-bs-target="#contentMenu">
@@ -176,9 +251,9 @@
                 <div class="modal-content border-0">
                     <div class="modal-body">
                         <div id="scrollspyContentMenu" class="list-group list-group-flush">
-                            <a class="list-group-item list-group-item-action border-0" href="#top">Navbar</a>
-                            <a class="list-group-item list-group-item-action border-0" href="#next">Item 2</a>
-                            <a class="list-group-item list-group-item-action border-0" href="#list-item-3">Item 3</a>
+                            <a class="list-group-item list-group-item-action border-0" href="#anchorNavbar">Navbar</a>
+                            <a class="list-group-item list-group-item-action border-0" href="#anchorOffcanvas">Offcanvas</a>
+                            <a class="list-group-item list-group-item-action border-0" href="#list-item-3">Navs</a>
                             <a class="list-group-item list-group-item-action border-0" href="#list-item-4">Item 4</a>
                             <a class="list-group-item list-group-item-action border-0" href="#list-item-3">Item 3</a>
                             <a class="list-group-item list-group-item-action border-0" href="#list-item-4">Item 4</a>

@@ -68,7 +68,7 @@ function modifyAttributes(id, type){
             var wrapHTML = wrap.innerHTML;
             wrap.innerHTML = "";
             wrap.innerHTML = wrapHTML;
-            var element = document.getElementById("offcanvas");
+            var element = document.getElementById(id);
 
             switch (type){
 
@@ -97,6 +97,18 @@ function modifyAttributes(id, type){
                     //button.setAttribute("data-bs-target","#offcanvas-id-bbs");
                     break;
             }
+            break;
+
+        //Navs and Tabs
+        case "navs-tabs":
+
+            var homeTab = document.getElementById("nav-home-tab");
+            var profileTab = document.getElementById("nav-profile-tab");
+            var contactTab = document.getElementById("nav-contact-tab");
+
+            homeTab.setAttribute("data-bs-toggle",type);
+            profileTab.setAttribute("data-bs-toggle",type);
+            contactTab.setAttribute("data-bs-toggle",type);
             break;
     }
 }

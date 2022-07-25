@@ -286,13 +286,51 @@
                 <label class="form-check-label" for="navs-orientation-h">Horizontal</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="navs-orientation" id="navs-orientation-v" value="navs-orientation-v" onclick="document.getElementById('navs-tabs-wrap').classList.add('d-flex','align-items-start');;toggleClass('navs-tabs', 1, 'flex-column')">
+                <input class="form-check-input" type="radio" name="navs-orientation" id="navs-orientation-v" value="navs-orientation-v" onclick="document.getElementById('navs-tabs-wrap').classList.add('d-flex','align-items-start');toggleClass('navs-tabs', 1, 'flex-column')">
                 <label class="form-check-label" for="navs-orientation-v">Vertical</label>
             </div>
         </div>
 
         <div style="padding: 10px;">
             <a href="https://getbootstrap.com/docs/5.0/components/navs-tabs/" target=”_blank”>Documentation for Navs and Tabs</a>
+        </div>
+        <br>
+
+        <!-- Breadcrumbs -->
+        <div id="anchorBreadcrumbs"></div>
+        <div style="padding: 10px;">
+            <h4>Breadcrumbs</h4>
+            <nav id="breadcrumb" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">Library</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Data</li>
+                </ol>
+            </nav>
+        </div>
+
+        <div style="padding: 10px;">
+            <h5>divider</h5>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="breadcrumb-divider" id="breadcrumb-divider-default" value="breadcrumb-divider-default" onclick="modifyAttributes('breadcrumb', '/')" checked>
+                <label class="form-check-label" for="breadcrumb-divider-default">/ (default)</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="breadcrumb-divider" id="breadcrumb-divider-arrow" value="breadcrumb-divider-arrow" onclick="modifyAttributes('breadcrumb', '>')">
+                <label class="form-check-label" for="breadcrumb-divider-arrow">></label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="breadcrumb-divider" id="breadcrumb-divider-svg" value="breadcrumb-divider-svg" onclick="modifyAttributes('breadcrumb', 'svg')">
+                <label class="form-check-label" for="breadcrumb-divider-svg">SVG</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="breadcrumb-divider" id="breadcrumb-divider-none" value="breadcrumb-divider-none" onclick="modifyAttributes('breadcrumb', 'url(&#34assets/dotpict_20201219_215041.png&#34)')">
+                <label class="form-check-label" for="breadcrumb-divider-none">none</label>
+            </div>
+        </div>
+
+        <div style="padding: 10px;">
+            <a href="https://getbootstrap.com/docs/5.0/components/breadcrumb/" target=”_blank”>Documentation for Breadcrumbs</a>
         </div>
         <br>
 
@@ -309,7 +347,7 @@
                             <a class="list-group-item list-group-item-action border-0" href="#anchorNavbar">Navbar</a>
                             <a class="list-group-item list-group-item-action border-0" href="#anchorOffcanvas">Offcanvas</a>
                             <a class="list-group-item list-group-item-action border-0" href="#anchorNavsTabs">Navs and Tabs</a>
-                            <a class="list-group-item list-group-item-action border-0" href="#list-item-4">Item 4</a>
+                            <a class="list-group-item list-group-item-action border-0" href="#anchorBreadcrumbs">Breadcrumbs</a>
                             <a class="list-group-item list-group-item-action border-0" href="#list-item-3">Item 3</a>
                             <a class="list-group-item list-group-item-action border-0" href="#list-item-4">Item 4</a>
                             <a class="list-group-item list-group-item-action border-0" href="#list-item-3">Item 3</a>

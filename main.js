@@ -53,6 +53,36 @@ function modifyInnerHTML(id, type){
         case "navbar-brand-imageText":
             html = '<img src="assets/dotpict_20201219_215041.png" alt="" width="40" height="40"  class="d-inline-block align-text-center"> Brand';
             break;
+        //ScrollSpy
+        case "scrollspy-nav":
+            html = '<nav id="scrollspyMenuEx" class="navbar navbar-light bg-light align-items-stretch">'+
+            '<a class="navbar-brand" href="#">Navbar</a>'+
+            '<nav class="nav nav-pills flex-column">'+
+            '<a class="nav-link" href="#item-1">Item 1</a>'+
+            '<nav class="nav nav-pills flex-column">'+
+            '    <a class="nav-link ms-3 my-1" href="#item-1-1">Item 1-1</a>'+
+            '    <a class="nav-link ms-3 my-1" href="#item-1-2">Item 1-2</a>'+
+            '</nav>'+
+            '<a class="nav-link" href="#item-2">Item 2</a>'+
+            '<a class="nav-link" href="#item-3">Item 3</a>'+
+            '<nav class="nav nav-pills flex-column">'+
+            '    <a class="nav-link ms-3 my-1" href="#item-3-1">Item 3-1</a>'+
+            '    <a class="nav-link ms-3 my-1" href="#item-3-2">Item 3-2</a>'+
+            '</nav>'+
+            '</nav>'+
+        '</nav>'
+            break;
+        case "scrollspy-list":
+            html = '<div id="scrollspyMenuEx" class="list-group">'+
+            '<a class="list-group-item list-group-item-action" href="#item-1">Item 1</a>'+
+            '<a class="list-group-item list-group-item-action" href="#item-1-1">Item 1-1</a>'+
+            '<a class="list-group-item list-group-item-action" href="#item-1-2">Item 1-2</a>'+
+            '<a class="list-group-item list-group-item-action" href="#item-2">Item 2</a>'+
+            '<a class="list-group-item list-group-item-action" href="#item-3">Item 3</a>'+
+            '<a class="list-group-item list-group-item-action" href="#item-3-1">Item 3-1</a>'+
+            '<a class="list-group-item list-group-item-action" href="#item-3-2">Item 3-2</a>'+
+          '</div>'
+            break;
     }
 
     document.getElementById(id).innerHTML = html;

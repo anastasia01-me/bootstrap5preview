@@ -473,6 +473,49 @@
         </div>
         <br>
 
+        <!-- Progress -->
+        <div id="anchorProgress"></div>
+        <div style="padding: 10px;">
+            <h4>Progress</h4>
+            <div class="progress">
+                <div id="progress-bar" class="progress-bar  " role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div>
+
+        <div style="padding: 10px;">
+            <h5>progress label</h5>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="progress-label" id="progress-label-none" value="progress-label-none" onclick="modifyInnerHTML('progress-bar','')" checked>
+                <label class="form-check-label" for="progress-label-none">no label</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="progress-label" id="progress-label" value="progress-label" onclick="modifyInnerHTML('progress-bar','progress-label')">
+                <label class="form-check-label" for="progress-label">with label</label>
+            </div>
+        </div>
+        
+        <div style="padding: 10px;">
+            <h5>progress stripes</h5>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="progress-stripe" id="progress-stripe-none" value="progress-stripe-none" onclick="toggleClass('progress-bar', 1,'')" checked>
+                <label class="form-check-label" for="progress-stripe-none">no stripes</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="progress-stripe" id="progress-stripe" value="progress-stripe" onclick="toggleClass('progress-bar', 1,'progress-bar-striped')">
+                <label class="form-check-label" for="progress-stripe">with stripes</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="progress-stripe" id="progress-stripe-animated" value="progress-stripe-animated" onclick="toggleClass('progress-bar', 2,'progress-bar-animated')">
+                <label class="form-check-label" for="progress-stripe-animated">with animated stripes</label>
+            </div>
+        </div>
+
+        <div style="padding: 10px;">
+            <a href="https://getbootstrap.com/docs/5.0/components/progress/" target=”_blank”>Documentation for Progress</a>
+        </div>
+        <br>
+
+
         <!-- Content Menu -->
         <button id="contentMenuBtn" data-bs-toggle="modal" data-bs-target="#contentMenu">
             <img src="assets/dotpict_20201219_215008.png" alt="" width="50px" height="auto">
@@ -489,7 +532,7 @@
                             <a class="list-group-item list-group-item-action border-0" href="#anchorBreadcrumbs">Breadcrumbs</a>
                             <a class="list-group-item list-group-item-action border-0" href="#anchorPagination">Pagination</a>
                             <a class="list-group-item list-group-item-action border-0" href="#anchorScrollSpy">ScrollSpy</a>
-                            <a class="list-group-item list-group-item-action border-0" href="#list-item-3">Item 3</a>
+                            <a class="list-group-item list-group-item-action border-0" href="#anchorProgress">Progress</a>
                             <a class="list-group-item list-group-item-action border-0" href="#list-item-4">Item 4</a>
                             <a class="list-group-item list-group-item-action border-0" href="#list-item-3">Item 3</a>
                             <a class="list-group-item list-group-item-action border-0" href="#list-item-4">Item 4</a>

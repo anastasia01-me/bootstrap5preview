@@ -83,6 +83,10 @@ function modifyInnerHTML(id, type){
             '<a class="list-group-item list-group-item-action" href="#item-3-2">Item 3-2</a>'+
           '</div>'
             break;
+        //Progress
+        case "progress-label":
+            html = "25%";
+            break;
     }
 
     document.getElementById(id).innerHTML = html;
